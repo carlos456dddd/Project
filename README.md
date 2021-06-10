@@ -1,2 +1,2 @@
-# CalculadoraCarlosAlbertoMamaniAchinquipa
+# Calculadora
 Una básica calculadora
