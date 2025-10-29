@@ -23,7 +23,39 @@ Diseñar, modelar e implementar una base de datos relacional para la gestión de
 
 Para poder visualizar de mejor manera los diagramas
 
+## 📊 Diagrama de Casos de Uso del Negocio
 
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+graph TD
+  Cliente((Empresa Cliente))
+  Comercial((Área Comercial))
+  Proveedor((Empresa Proveedora))
+  Inspector((Inspector))
+  Lab((Personal Laboratorio))
+
+  %% Proceso general
+  Cliente -->|UC001: Contactar| Comercial
+  Comercial -->|UC002: Generar orden| UC003[UC003: Informar orden]
+  UC003 --> Proveedor
+
+  %% Inspección higiénico-sanitaria
+  Proveedor -->|UC004: Revisar instalaciones| Inspector
+  Inspector -->|UC005: Obtener datos empleados| Proveedor
+
+  %% Muestreo
+  Inspector -->|UC006: Tomar muestras superficies| Proveedor
+  Inspector -->|UC007: Tomar muestras personal| Proveedor
+  Inspector -->|UC008: Tomar muestras producto final| Proveedor
+  Inspector -->|UC009: Enviar a laboratorio| Lab
+
+  %% Análisis
+  Lab -->|UC010: Realizar análisis| Lab
+
+  %% Certificación
+  Lab -->|UC011: Comprobar resultados| Comercial
+  Comercial -->|UC012: Generar certificado| Cliente
+```
 ## 🧱 Modelo Lógico (ER)
 
 ```mermaid
