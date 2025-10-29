@@ -4,8 +4,7 @@
 ---
 
 ## 🎯 Objetivo del Proyecto
-Diseñar, modelar e implementar una base de datos relacional para la gestión de inspecciones, certificaciones y recursos humanos de una empresa multinacional de servicios de calidad, además de construir un pequeño sistema web que permita interactuar con dicha base de datos.
-
+Diseñar, modelar e implementar una base de datos relacional para la gestión de inspecciones, certificaciones y recursos humanos de una empresa multinacional de servicios de calidad, además de construir un pequeño sistema web que permita interactuar con dicha base de datos. Representando los conocimientos adquieridos en base de datos.
 ---
 
 ## 🧱 Tecnologías Utilizadas
@@ -275,14 +274,14 @@ Flujo SSIS que replica la tabla `cmcl.Certificacion` a archivo `.xlsx` para repo
 ## 🧪 Calendario de Tareas
 ```mermaid
 gantt
-  title Cronograma resumido (2022)
+  title Cronograma resumido (2024)
   dateFormat YYYY-MM-DD
   section Modelado
-  Entrevistas           :2022-05-15, 3d
-  MER & lógico          :2022-05-26, 5d
+  Entrevistas           :2024-05-15, 3d
+  MER & lógico          :2024-05-26, 5d
   section Implementación
-  Esquemas y tablas     :2022-06-01, 4d
-  Procedimientos        :2022-07-01, 8d
-  Triggers & backups    :2022-07-23, 3d
+  Esquemas y tablas     :2024-06-01, 4d
+  Procedimientos        :2024-07-01, 8d
+  Triggers & backups    :2024-07-23, 3d
   section Frontend
-  Interfaz web          :2022-07-18, 6d
+  Interfaz web          :2024-07-18, 6d
