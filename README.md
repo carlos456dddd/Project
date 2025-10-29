@@ -4,7 +4,10 @@
 ---
 
 ## 🎯 Objetivo del Proyecto
-Diseñar, modelar e implementar una base de datos relacional para la gestión de inspecciones, certificaciones y recursos humanos de una empresa multinacional de servicios de calidad, además de construir un pequeño sistema web que permita interactuar con dicha base de datos. Representando los conocimientos adquieridos en base de datos.
+
+Diseñar, modelar e implementar una base de datos relacional para la gestión de inspecciones, certificaciones y recursos humanos de una empresa multinacional de servicios de calidad, además de construir un pequeño sistema web que permita interactuar con dicha base de datos. 
+Representando los conocimientos adquieridos en base de datos.
+
 ---
 
 ## 🧱 Tecnologías Utilizadas
