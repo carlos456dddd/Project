@@ -1,0 +1,132 @@
+.empleados{
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    height: 110vh;
+    padding: 30px 50px;
+    display: flex;
+    /*background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);*/
+}
+.imagen_form{
+    width: 50%;
+}
+.imagen_form img{
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin: 20% 30%;
+}
+/*******************************************************************/
+.form_empleados{
+    width: 50%;
+    padding: 50px;
+    height: 700px;
+    border: 4px solid black;
+    border-radius: 70px;
+    box-shadow: 5px 3px 15px rgb(61, 61, 61);
+}
+.form_empleados h1{
+    font-size: 4rem;
+    padding-bottom: 20px;
+}
+.form_empleados label{
+    font-size: 1.8rem;
+    padding: 0px 5px;
+}
+.form_empleados .mensaje{
+    font-size: 1.7rem;
+    /*text-align: justify;*/
+    margin-bottom: 10px;
+}
+.id_form{
+    width: 50px;
+    
+}
+.apellido_form{
+    width: 20px;
+}
+#id_form{
+    width: 30px;
+}
+.table_form label{
+    text-align: right;
+}
+.table_form input{
+    padding: 3px 5px;
+    font-size: 14px;
+    width: 100%;
+}
+.table_form{
+    border-collapse: collapse;
+}
+select{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.4rem;
+}
+select option{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.4rem;
+}
+.btn_enviar{
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    background-color: rgba(73, 196, 196, 0);
+    border: 3px solid rgb(57, 116, 139);
+    border-radius: 60px;
+    display:block;
+    margin: 25px auto;
+    font-weight: 600;
+}
+.btn_enviar:hover{
+    background-color: rgb(144, 188, 255);
+    transition: 0.1s ease;
+}
+
+/************************************************************/
+.tab_empleados{
+    margin-top: 60px;
+}
+.tab_empleados h3{
+    display: block;
+    text-align: center;
+    font-size: 3.4rem;
+}
+.table th, table td{
+    padding: 10px 10px;
+    font-size: 13px;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    align-content: center;
+    margin-top: 60px;
+}
+.table th{
+    color: white;
+    background-color: rgb(62, 92, 190);
+}
+.th_id{
+    width: 10px;
+}
+.table td{
+    background-color:rgb(224, 224, 224);
+}
+.btn_mod{
+    font-size: 1.5rem;
+    padding: 3px 0;
+    margin-left: 5px;
+    width: 100%;
+    color: white;
+    border: 1px solid rgb(148, 148, 148);
+}
+.btn_editar{
+    background-color: steelblue;
+}
+.btn_eliminar{
+    background-color: tomato;
+}
+
+.footer{
+    margin-top: 130px;
+}

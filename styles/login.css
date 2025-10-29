@@ -1,0 +1,48 @@
+.box_login{
+    display: flex;
+    height: 73.11vh;
+    padding: 80px 140px;
+}
+.login{
+    width: 46%;
+}
+.login h1{
+    font-size: 4rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.login label{
+    font-size: 1.7rem;
+}
+.login input{
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 6px 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#enviar_form{
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: 500;
+    padding: 15px 0;
+    border: none;
+}
+#enviar_form:hover{
+    background-color: rgb(226, 124, 9);
+    
+    transition: 0.3s ease;
+}
+.login_image{
+    width: 50%;
+}
+.login_image img{
+    width: 370px;
+    display: block;
+    align-self: center;
+    margin-left: 230px;
+    
+}

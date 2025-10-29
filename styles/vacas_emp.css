@@ -1,0 +1,80 @@
+.vacaciones{
+    display: flex;
+}
+.form_vacaciones{
+    width: 30%;
+    padding: 100px 80px 80px 80px;
+}
+.form_vacaciones h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.form_vacaciones form input{
+    width: 100%;
+    margin: 10px;
+    padding: 5px 7px;
+    font-size: 1.5rem;
+
+}
+.form_vacaciones form label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+#btn_enviar{
+    border: none;
+    background-color: rgb(255, 128, 82);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 8px 0;
+}
+/******************************/
+.table_vacaciones{
+    width: 70%;
+    padding: 80px;
+}
+.table_vacaciones h3{
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.table_vacaciones p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.table_v_aceptadas table, .table_v_sin_aceptar table{
+    width: 100%;
+}
+.table_v_aceptadas table th, .table_v_sin_aceptar table th{
+    background-color: rgb(255, 170, 0);
+    font-size: 1.5rem;
+    padding: 7px 0;
+}
+.table_v_aceptadas table td, .table_v_sin_aceptar table td{
+    font-size: 1.5rem;
+    background-color: rgb(238, 238, 238);
+    padding: 7px 0;
+    text-align: center;
+}
+.table_v_sin_aceptar table{
+    margin-bottom: 30px;
+}
+.btn_mod{
+    font-size: 1.5rem;
+    padding: 3px 0;
+    margin-left: 5px;
+    width: 120px;
+    color: white;
+    border: 1px solid rgb(148, 148, 148);
+}
+.btn_editar{
+    background-color: steelblue;
+}
+.btn_eliminar{
+    background-color: tomato;
+}
+.editar{
+    width: 280px;
+}

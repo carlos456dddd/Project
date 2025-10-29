@@ -1,0 +1,89 @@
+.descanso{
+    display: flex;
+}
+.descanso_form{
+    padding: 60px;
+    width: 30%;
+}
+.descanso_form h1{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.descanso_form label{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.descanso_form input{
+    width: 100%;
+    margin: 10px;
+    padding: 5px 7px;
+    font-size: 1.4rem;
+}
+.descanso_form textarea{
+    margin: 10px 10px;
+    width: 100%;
+    height: 100px;
+    padding: 3px 5px;
+    font-size: 1.6rem;
+    resize: none;
+}
+
+.enviar_form{
+    border: none;
+    background-color: rgb(255, 128, 82);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    height: 40px;
+}
+
+/**************************************/
+
+.tabla{
+    width: 70%;
+    padding: 60px;
+}
+.tabla table{
+    width: 100%;
+    border: none;
+}
+.tabla table th{
+    background-color: rgb(255, 170, 0);
+    font-size: 1.5rem;
+    padding: 7px 0;
+}
+.tabla table td{
+    font-size: 1.5rem;
+    background-color: rgb(238, 238, 238);
+    padding: 7px 0;
+    text-align: center;
+}
+.table_id{
+    width: 30px;
+}
+.btn_mod{
+    font-size: 1.5rem;
+    padding: 3px 0;
+    margin-left: 5px;
+    width: 100px;
+    color: white;
+    border: 1px solid rgb(148, 148, 148);
+}
+.btn_editar{
+    background-color: steelblue;
+}
+.btn_eliminar{
+    background-color: tomato;
+}
+.tabla h3{
+    font-size: 2.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tabla p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}

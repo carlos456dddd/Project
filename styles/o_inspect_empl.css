@@ -1,0 +1,103 @@
+.orden_inspeccion{
+    display: flex;
+}
+.orden_form{
+    width: 30%;
+    padding: 60px;
+}
+.orden_form h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.orden_form label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.orden_form input{
+    width: 100%;
+    margin: 10px;
+    padding: 5px 7px;
+    font-size: 1.4rem;
+}
+.orden_form textarea{
+    resize: none;
+    display: block;
+    width: 100%;
+    padding: 5px 7px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    height: 140px;
+}
+.orden_form table{
+    width: 100%;
+}
+.orden_form table td{
+    padding: 5px 0;
+}
+.orden_form table select{
+    font-size: 1.4rem;
+    display: block;
+    width: 100%;
+}
+.orden_form table option{
+    font-size: 1.4rem;
+    display: block;
+    width: 100%;
+}
+.orden_table{
+    width: 70%;
+    padding: 60px;
+}
+.orden_table h3{
+    font-size: 2.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.orden_table p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.orden_table table{
+    width: 100%;
+}
+.orden_table table th{
+    background-color: rgb(255, 170, 0);
+    font-size: 1.5rem;
+    padding: 7px 0;
+}
+.orden_table table td{
+    font-size: 1.5rem;
+    background-color: rgb(238, 238, 238);
+    padding: 7px 0;
+    text-align: center;
+}
+#btn_enviar{
+    border: none;
+    background-color: rgb(255, 128, 82);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+.btn_mod{
+    font-size: 1.5rem;
+    padding: 3px 0;
+    margin-left: 5px;
+    width: 100px;
+    color: white;
+    border: 1px solid rgb(148, 148, 148);
+}
+.btn_editar{
+    background-color: steelblue;
+}
+.btn_eliminar{
+    background-color: tomato;
+}
+.mod{
+    width: 220px;
+}

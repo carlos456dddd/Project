@@ -1,0 +1,12 @@
+.index{
+    padding: 80px 150px;
+}
+.index h1{
+    font-size: 3rem;
+    margin: 30px 0 20px 0;
+}
+.index p{
+    font-size: 1.7rem;
+    padding-left: 20px;
+    text-align: justify;
+}
