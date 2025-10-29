@@ -23,9 +23,9 @@ Representando los conocimientos adquieridos en base de datos.
 
 ## 🗺️ Diagramas & Modelos
 
-Para poder visualizar de mejor manera los diagramas
-
 ## 📊 Diagrama de Casos de Uso del Negocio
+En caso de querer visualizar de mejro manera los diagramas que se planteo puede acceder a la sección demominada 'Documentation' en este mismo repositorio.
+[📄 Archivo PDF con los casos de uso](Documentation/DiagramasCasoDeUsoUML-12-14-uml.pdf)
 
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
