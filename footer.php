@@ -10,7 +10,6 @@
         <div class="footer">
             <h5>Sistema SGS</h5>
             <p>www.sgsPeru.com</p>
-            <p class="copyright">Copyright ©2022 SGS. Design by Gabriel Arias</p>
         </div>
     </body>
 </html>
