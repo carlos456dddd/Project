@@ -1,10 +1,6 @@
-# 📁 Proyecto Final – Base de Datos II  
-**Universidad Nacional de Moquegua**  
+# 📁 Proyecto 
 **Escuela Profesional de Ingeniería de Sistemas e Informática**  
-**Curso:** IS-523 – Base de Datos II  
 **Tipo:** Proyecto grupal académico  
-**Año:** 2022  
-
 ---
 
 ## 🎯 Objetivo del Proyecto
@@ -25,30 +21,182 @@ Diseñar, modelar e implementar una base de datos relacional para la gestión de
 
 ## 🗺️ Diagramas & Modelos
 
-### 1. Diagrama de Casos de Uso del Negocio
-![Caso de Uso 01](docs/fig01_caso_uso_general.png)  
-*Fig. 1 – Vista general de actores y procesos clave: contacto comercial, inspección, muestreo, análisis y certificación.*
+Para poder visualizar de mejor manera los diagramas
 
-![Caso de Uso Inspección](docs/fig02_caso_uso_inspeccion.png)  
-*Fig. 2 – Sub-proceso de inspección higiénico-sanitaria.*
 
----
+## 🧱 Modelo Lógico (ER)
 
-### 2. Modelo Conceptual (MER)
-![Modelo Conceptual](docs/fig06_conceptual.png)  
-*Fig. 3 – Entidades principales y relaciones de alto nivel.*
+```mermaid
+erDiagram
+    PAIS {
+        TINYINT idPais PK
+        VARCHAR(40) nombrePais
+        VARCHAR(400) descripcionTrab
+        VARCHAR(50) nombreGerente
+        DECIMAL(20,4) ganancias
+        INT nroEmpleados
+    }
 
----
+    AREAS {
+        TINYINT idArea PK
+        VARCHAR(11) nombreArea
+        VARCHAR(400) descripcion
+        INT nroEmpleados
+        VARCHAR(50) nombreJefe
+        VARCHAR(100) direccionGerencia
+    }
 
-### 3. Modelo Lógico
-![Modelo Lógico](docs/fig07_logico.png)  
-*Fig. 4 – Esquema normalizado (3NF) con claves primarias y foráneas.*
+    SEDE {
+        SMALLINT idSede PK
+        VARCHAR(100) direccion
+        VARCHAR(30) distrito
+        VARCHAR(40) ciudad
+        INT codigoPostal
+        VARCHAR(13) telefono
+        TINYINT idPais FK
+        TINYINT idArea FK
+    }
 
----
+    PUESTO {
+        TINYINT idPuesto PK
+        VARCHAR(30) nombrePuesto
+        DECIMAL(5,2) sueldo
+    }
 
-### 4. Modelo Físico
-![Modelo Físico](docs/fig08_fisico.png)  
-*Fig. 5 – Script de creación de tablas, índices y constraints.*
+    SEGUROMEDICO {
+        INT idSeguro PK
+        VARCHAR(20) tipoSeguro
+        DECIMAL(4,2) monto
+        DATE fechaPago
+    }
+
+    EMPLEADO {
+        INT idEmpleado PK
+        VARCHAR(40) nombresEmpleado
+        VARCHAR(40) apellidosEmpleado
+        VARCHAR(70) correoElectronico
+        VARCHAR(255) contrasena
+        VARCHAR(30) titulo
+        DATE fechaIngreso
+        VARCHAR(100) direccion
+        VARCHAR(13) telefono
+        DATE vencimientoContrato
+        TINYINT idPuesto FK
+        INT idSeguro FK
+        TINYINT idArea FK
+        SMALLINT idSede FK
+    }
+
+    DESCANSOMEDICO {
+        INT idDescanso PK
+        VARCHAR(400) descripcion
+        DATE fechaSolicitud
+        DATE fechaSalida
+        DATE fechaRetorno
+        INT idEmpleado FK
+    }
+
+    GESTIONVACACIONES {
+        INT idVacaciones PK
+        TINYINT cantidadDias
+        DATE fechaInicio
+        DATE fechaRetorno
+        BIT confirmado
+        INT idEmpleado FK
+    }
+
+    TIPOCERTIFICADO {
+        SMALLINT idTipoCert PK
+        VARCHAR(20) nombreCert
+        VARCHAR(400) descripcionCert
+    }
+
+    EMPRESACLIENTE {
+        INT idEmpresaCliente PK
+        VARCHAR(12) RUC
+        VARCHAR(50) nombreEmpresaCliente
+        VARCHAR(100) direccionEmpresa
+        VARCHAR(50) nombreGerente
+        VARCHAR(16) telefonoEmpresaCliente
+        VARCHAR(100) correoEmpresaCliente
+    }
+
+    EMPRESAPROVEEDORA {
+        INT idEmpresaProveedora PK
+        VARCHAR(12) RUC
+        VARCHAR(50) nombreEmpresaProveedora
+        VARCHAR(100) direccionEmpresa
+        VARCHAR(50) nombreGerente
+        VARCHAR(30) rubro
+        VARCHAR(16) telefonoEmpresaProveedora
+        VARCHAR(100) correoEmpresaProveedora
+    }
+
+    TIPOINSPECCION {
+        TINYINT idTipoInspeccion PK
+        VARCHAR(30) nombreInspeccion
+        VARCHAR(400) descripcion
+    }
+
+    TIPOANALISIS {
+        TINYINT idTipoAnalisis PK
+        VARCHAR(30) nombreAnalisis
+        VARCHAR(400) descripcionAnalisis
+    }
+
+    ORDENINSPECCION {
+        INT idOrden PK
+        DATE fechaEmision
+        DATE fechaDeInspeccion
+        VARCHAR(30) nombreInspector
+        VARCHAR(400) descripcion
+        INT idEmpresaProveedora FK
+        TINYINT idTipoInspeccion FK
+        INT idEmpleado FK
+    }
+
+    ACTA {
+        INT idActa PK
+        DATE fechaEmision
+        VARCHAR(400) descripcion
+        INT idEmpresaProveedora FK
+        INT idEmpleado FK
+        INT idOrdenInspeccion FK
+        TINYINT idTipoInspeccion FK
+        TINYINT idTipoAnalisis FK
+    }
+
+    CERTIFICACION {
+        INT idCertificacion PK
+        DATE fechaCertificacion
+        SMALLINT idTipoCertificado FK
+        INT idEmpresaCliente FK
+        INT idEmpresaProveedora FK
+        INT idActa FK
+    }
+
+    %% ---- Relaciones ----
+    SEDE ||--o{ EMPLEADO : "1-N"
+    PUESTO ||--o{ EMPLEADO : "1-N"
+    SEGUROMEDICO ||--o{ EMPLEADO : "1-N"
+    AREAS ||--o{ EMPLEADO : "1-N"
+    AREAS ||--o{ SEDE : "1-N"
+    PAIS ||--o{ SEDE : "1-N"
+    EMPLEADO ||--o{ DESCANSOMEDICO : "1-N"
+    EMPLEADO ||--o{ GESTIONVACACIONES : "1-N"
+    EMPRESAPROVEEDORA ||--o{ ORDENINSPECCION : "1-N"
+    TIPOINSPECCION ||--o{ ORDENINSPECCION : "1-N"
+    EMPLEADO ||--o{ ORDENINSPECCION : "1-N"
+    ORDENINSPECCION ||--o{ ACTA : "1-1"
+    TIPOINSPECCION ||--o{ ACTA : "1-N"
+    TIPOANALISIS ||--o{ ACTA : "1-N"
+    EMPRESAPROVEEDORA ||--o{ ACTA : "1-N"
+    EMPLEADO ||--o{ ACTA : "1-N"
+    TIPOCERTIFICADO ||--o{ CERTIFICACION : "1-N"
+    EMPRESACLIENTE ||--o{ CERTIFICACION : "1-N"
+    EMPRESAPROVEEDORA ||--o{ CERTIFICACION : "1-N"
+    ACTA ||--o{ CERTIFICACION : "1-1"
+```
 
 ---
 
