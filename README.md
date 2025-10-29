@@ -23,9 +23,9 @@ Representando los conocimientos adquieridos en base de datos.
 
 ## 🗺️ Diagramas & Modelos
 
-Para poder visualizar de mejor manera los diagramas
-
 ## 📊 Diagrama de Casos de Uso del Negocio
+En caso de querer visualizar de mejor manera los diagramas que se planteo puede acceder a la sección demominada 'Documentation' en este mismo repositorio.
+[📄 Archivo PDF con los casos de uso](Documentation/DiagramasCasoDeUsoUML-12-14-uml.pdf)
 
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
@@ -59,7 +59,8 @@ graph TD
   Comercial -->|UC012: Generar certificado| Cliente
 ```
 ## 🧱 Modelo Lógico (ER)
-
+Para mas detalles acceda al apartado en 'Documentation' donde se podrá visualizar tanto el Modelo lógico, conceptual y modelo físico de la base de datos.
+[📄 Archivo PDF Modelos de la base de datos](Documentation/ModeloConceptual-ModeloLógico-ModeloFísico-BasedeDatos.pdf)
 ```mermaid
 erDiagram
     PAIS {
@@ -244,7 +245,8 @@ erDiagram
 | `fne_SueldoNeto` | Escalar | Calcular sueldo final (descuentos AFP, seguro) |
 | `fnt_empleados_descanso` | Tabla | Listar empleados actualmente con descanso médico |
 
-&gt; Todos los objetos están versionados en `/sql/store/` con prefijo `usp_` (procedimientos) y `fn_` (funciones).
+Para visualización con mas detalle:
+[📄 Archivo PDF Procedimientos y funciones utilizados](Documentation/Procedimientos-y-funciones.pdf)
 
 ---
 
@@ -256,21 +258,25 @@ erDiagram
 | `tr_empleadoModificado` | rrhh.Empleado | UPDATE | Idem + fecha/hora |
 | `tr_empleadoEliminado` | rrhh.Empleado | DELETE | Idem + usuario |
 
+Para visualización con mas detalle:
+[📄 Archivo PDF Triggers de Auditoría](Documentation/Triggers.pdf)
+
 ---
 
 ## 💾 Backups Automáticos
 - **Frecuencia:** Diaria 00:00 hrs  
 - **Destinos:** Disco local `D:\backups\` + carpeta secundaria `C:\respaldo\`  
 - **Técnica:** Job SQL Server Agent con formato `.bak` y timestamp.  
-*Configuración:* `docs/fig92_job_backup.png`
-
+Para visualización con mas detalle:
+[📄 Archivo PDF Backups](Documentation/CreaciónBackup.pdf)
 ---
 
 ## 📊 Exportación a Excel
 Flujo SSIS que replica la tabla `cmcl.Certificacion` a archivo `.xlsx` para reportes gerenciales.  
 *Origen:* OLE DB SQL Server  
 *Destino:* Excel 2016+ (xlsx)  
-*Vista:* `docs/fig94_95_ssis.png`
+Para visualización con mas detalle:
+[📄 Archivo PDF Transferencia de certificaciones a Excel](Documentation/Transferencia-de-tabla-certificaciones-a-Excel.pdf)
 
 ---
 
