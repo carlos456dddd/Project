@@ -29,150 +29,150 @@ Para poder visualizar de mejor manera los diagramas
 ```mermaid
 erDiagram
     PAIS {
-        TINYINT idPais PK
-        VARCHAR(40) nombrePais
-        VARCHAR(400) descripcionTrab
-        VARCHAR(50) nombreGerente
-        DECIMAL(20,4) ganancias
-        INT nroEmpleados
+        int idPais PK
+        string nombrePais
+        string descripcionTrab
+        string nombreGerente
+        decimal ganancias
+        int nroEmpleados
     }
 
     AREAS {
-        TINYINT idArea PK
-        VARCHAR(11) nombreArea
-        VARCHAR(400) descripcion
-        INT nroEmpleados
-        VARCHAR(50) nombreJefe
-        VARCHAR(100) direccionGerencia
+        int idArea PK
+        string nombreArea
+        string descripcion
+        int nroEmpleados
+        string nombreJefe
+        string direccionGerencia
     }
 
     SEDE {
-        SMALLINT idSede PK
-        VARCHAR(100) direccion
-        VARCHAR(30) distrito
-        VARCHAR(40) ciudad
-        INT codigoPostal
-        VARCHAR(13) telefono
-        TINYINT idPais FK
-        TINYINT idArea FK
+        int idSede PK
+        string direccion
+        string distrito
+        string ciudad
+        int codigoPostal
+        string telefono
+        int idPais FK
+        int idArea FK
     }
 
     PUESTO {
-        TINYINT idPuesto PK
-        VARCHAR(30) nombrePuesto
-        DECIMAL(5,2) sueldo
+        int idPuesto PK
+        string nombrePuesto
+        decimal sueldo
     }
 
     SEGUROMEDICO {
-        INT idSeguro PK
-        VARCHAR(20) tipoSeguro
-        DECIMAL(4,2) monto
-        DATE fechaPago
+        int idSeguro PK
+        string tipoSeguro
+        decimal monto
+        date fechaPago
     }
 
     EMPLEADO {
-        INT idEmpleado PK
-        VARCHAR(40) nombresEmpleado
-        VARCHAR(40) apellidosEmpleado
-        VARCHAR(70) correoElectronico
-        VARCHAR(255) contrasena
-        VARCHAR(30) titulo
-        DATE fechaIngreso
-        VARCHAR(100) direccion
-        VARCHAR(13) telefono
-        DATE vencimientoContrato
-        TINYINT idPuesto FK
-        INT idSeguro FK
-        TINYINT idArea FK
-        SMALLINT idSede FK
+        int idEmpleado PK
+        string nombresEmpleado
+        string apellidosEmpleado
+        string correoElectronico
+        string contrasena
+        string titulo
+        date fechaIngreso
+        string direccion
+        string telefono
+        date vencimientoContrato
+        int idPuesto FK
+        int idSeguro FK
+        int idArea FK
+        int idSede FK
     }
 
     DESCANSOMEDICO {
-        INT idDescanso PK
-        VARCHAR(400) descripcion
-        DATE fechaSolicitud
-        DATE fechaSalida
-        DATE fechaRetorno
-        INT idEmpleado FK
+        int idDescanso PK
+        string descripcion
+        date fechaSolicitud
+        date fechaSalida
+        date fechaRetorno
+        int idEmpleado FK
     }
 
     GESTIONVACACIONES {
-        INT idVacaciones PK
-        TINYINT cantidadDias
-        DATE fechaInicio
-        DATE fechaRetorno
-        BIT confirmado
-        INT idEmpleado FK
+        int idVacaciones PK
+        int cantidadDias
+        date fechaInicio
+        date fechaRetorno
+        boolean confirmado
+        int idEmpleado FK
     }
 
     TIPOCERTIFICADO {
-        SMALLINT idTipoCert PK
-        VARCHAR(20) nombreCert
-        VARCHAR(400) descripcionCert
+        int idTipoCert PK
+        string nombreCert
+        string descripcionCert
     }
 
     EMPRESACLIENTE {
-        INT idEmpresaCliente PK
-        VARCHAR(12) RUC
-        VARCHAR(50) nombreEmpresaCliente
-        VARCHAR(100) direccionEmpresa
-        VARCHAR(50) nombreGerente
-        VARCHAR(16) telefonoEmpresaCliente
-        VARCHAR(100) correoEmpresaCliente
+        int idEmpresaCliente PK
+        string RUC
+        string nombreEmpresaCliente
+        string direccionEmpresa
+        string nombreGerente
+        string telefonoEmpresaCliente
+        string correoEmpresaCliente
     }
 
     EMPRESAPROVEEDORA {
-        INT idEmpresaProveedora PK
-        VARCHAR(12) RUC
-        VARCHAR(50) nombreEmpresaProveedora
-        VARCHAR(100) direccionEmpresa
-        VARCHAR(50) nombreGerente
-        VARCHAR(30) rubro
-        VARCHAR(16) telefonoEmpresaProveedora
-        VARCHAR(100) correoEmpresaProveedora
+        int idEmpresaProveedora PK
+        string RUC
+        string nombreEmpresaProveedora
+        string direccionEmpresa
+        string nombreGerente
+        string rubro
+        string telefonoEmpresaProveedora
+        string correoEmpresaProveedora
     }
 
     TIPOINSPECCION {
-        TINYINT idTipoInspeccion PK
-        VARCHAR(30) nombreInspeccion
-        VARCHAR(400) descripcion
+        int idTipoInspeccion PK
+        string nombreInspeccion
+        string descripcion
     }
 
     TIPOANALISIS {
-        TINYINT idTipoAnalisis PK
-        VARCHAR(30) nombreAnalisis
-        VARCHAR(400) descripcionAnalisis
+        int idTipoAnalisis PK
+        string nombreAnalisis
+        string descripcionAnalisis
     }
 
     ORDENINSPECCION {
-        INT idOrden PK
-        DATE fechaEmision
-        DATE fechaDeInspeccion
-        VARCHAR(30) nombreInspector
-        VARCHAR(400) descripcion
-        INT idEmpresaProveedora FK
-        TINYINT idTipoInspeccion FK
-        INT idEmpleado FK
+        int idOrden PK
+        date fechaEmision
+        date fechaDeInspeccion
+        string nombreInspector
+        string descripcion
+        int idEmpresaProveedora FK
+        int idTipoInspeccion FK
+        int idEmpleado FK
     }
 
     ACTA {
-        INT idActa PK
-        DATE fechaEmision
-        VARCHAR(400) descripcion
-        INT idEmpresaProveedora FK
-        INT idEmpleado FK
-        INT idOrdenInspeccion FK
-        TINYINT idTipoInspeccion FK
-        TINYINT idTipoAnalisis FK
+        int idActa PK
+        date fechaEmision
+        string descripcion
+        int idEmpresaProveedora FK
+        int idEmpleado FK
+        int idOrdenInspeccion FK
+        int idTipoInspeccion FK
+        int idTipoAnalisis FK
     }
 
     CERTIFICACION {
-        INT idCertificacion PK
-        DATE fechaCertificacion
-        SMALLINT idTipoCertificado FK
-        INT idEmpresaCliente FK
-        INT idEmpresaProveedora FK
-        INT idActa FK
+        int idCertificacion PK
+        date fechaCertificacion
+        int idTipoCertificado FK
+        int idEmpresaCliente FK
+        int idEmpresaProveedora FK
+        int idActa FK
     }
 
     %% ---- Relaciones ----
