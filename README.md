@@ -294,3 +294,6 @@ gantt
   Triggers & backups    :2024-07-23, 3d
   section Frontend
   Interfaz web          :2024-07-18, 6d
+```
+## Consideraciones Finales
+En caso de querer utilizar la base de datos puede restaurar la base de datos puede ingresar directamente a la carpeta 'Backup' del respositorio para poder realizarlo con Microsoft SQL Server 2019. El archivo esta disponible como [Backup](Backup)
